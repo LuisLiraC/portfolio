@@ -11,6 +11,13 @@ function openCourse(event){
     $modalContent.style.animation = 'modalIn .8s forwards';
 }
 
+$modal.addEventListener('click', () => {
+    $modalContent.style.animation = 'modalOut .8s forwards';
+    setTimeout(function() {
+        $modal.classList.remove('active')
+    }, 800);
+});
+
 $hideModal.addEventListener('click', () => {
     $modalContent.style.animation = 'modalOut .8s forwards';
     setTimeout(function() {
@@ -18,4 +25,7 @@ $hideModal.addEventListener('click', () => {
     }, 800);
 });
 
-
+function fadeIn(event){
+    event.currentTarget.style = 'display: block;'
+    event.currentTarget.style.animation = 'fadeIn 1.5s forwards';
+}
