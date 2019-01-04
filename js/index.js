@@ -31,11 +31,16 @@ function courseTemplate (HTMLString){
     return html.body.children[0];
 };
 
-const $test = document.getElementById('courses-container');
+const $courses_title = document.getElementById('courses-list-title')
+$courses_title.innerHTML = "Hola";
+
+const $courses_container = document.getElementById('courses-container');
 const folder = 'img/courses/';
 
 const course_images =[
     // Frontend
+    'diploma-sass.png',
+    'diploma-fundamentos-javascript.png',
     'diploma-jquery-js.png',
     'diploma-optimizacion-web.png',
     'diploma-postcss.png',
@@ -45,6 +50,7 @@ const course_images =[
     'diploma-html5-css3.png',
     'diploma-programacion-basica.png',
     // Conocimientos Generales
+    'diploma-bd.png',
     'diploma-git-github.png',
     'diploma-terminal.png',
     'diploma-ingenieria.png',
@@ -69,6 +75,8 @@ course_images.forEach(function(img) {
         event.srcElement.style = 'display: inline-block';
         event.srcElement.style.animation = 'fadeIn 1.5s forwards'
     })
-    $test.appendChild(course_element);
+    $courses_container.append(course_element);
+    $courses_title.innerHTML = `Cursos aprobados: ${course_images.length}`
 })
+
 
