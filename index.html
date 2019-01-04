@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Critical CSS -->
     <style>
         html{scroll-behavior:smooth}body{margin:0;font-family:'Roboto',system-ui}figure{margin:0}.header{background:#34495e;align-items:center;position:sticky;top:0;z-index:2}ul{display:flex;width:100%;justify-content:flex-end;font-family:'Roboto',system-ui;align-items:center;padding:0;margin:0;height:2.5em}li{display:flex;align-items:center;padding:0 1em;text-align:center}a{text-decoration:none;color:white}h1,h3{font-weight:500}.header,.hero,.jobs-list{display:flex;justify-content:center}.container{max-width:1000px;width:100vw;padding:0 1em}.hero{background:#2c3e50;padding:25px 0}.hero .container{display:grid;grid-template-columns:25% 75%;grid-template-rows:25% 75%;grid-template-areas:"img name" "img description";justify-items:center;align-items:center;background:inherit;color:white}.hero-image{grid-area:img;box-sizing:border-box}.hero-image img{height:100%;width:100%;border-radius:50%}.name{grid-area:name;display:flex;align-items:center;margin:0;font-size:48px;padding:0 100px 10px 100px;border-bottom:2px solid #2ecc71}.self-description{grid-area:description;display:flex;align-items:center;margin:0;text-align:center;padding:0 auto;font-size:1.2em;padding:0 1.3em}.jobs-list{background-color:#ecf0f1}.jobs-list-title{display:flex;justify-content:center;font-size:25px;margin:20px}.job{display:grid;grid-template-columns:repeat(4,25%);grid-template-rows:repeat(auto-fit,(3,1fr));grid-template-areas:"logo company position start" "logo company position end" "description description description description";justify-items:center;align-items:center;background:inherit;background:white;padding-top:15px;border-radius:10px;margin:15px 0}.job-logo{grid-area:logo;margin:0}.job-logo img{max-width:90%}.job-company{grid-area:company;margin:0;font-size:20px;text-align:center}.job-position{grid-area:position;margin:0;font-size:18px;text-align:center}.job-date.start{grid-area:start;margin:0;font-size:15px;text-align:center}.job-date.end{grid-area:end;margin:0;font-size:15px;text-align:center}.job-description{grid-area:description;text-align:center;padding:0 90px;margin-top:30px;font-size:1em}.courses-list-title{grid-area:title;font-size:25px;margin:0;margin-bottom:10px}.course img{height:100%;width:100%;border-radius:5px;will-change:transform;display:none}.modal{display:none}.modal-content{width:95vh;max-height:100vh;background:white;border-radius:10px;padding:0.5em;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;flex-flow:column}.modal-img{max-width:100%;margin-bottom:10px}.modal-btn{font-family:'Roboto',system-ui;font-size:1em;padding:5px 10px;border-radius:5px;background:#2980b9;color:white;border:none;outline:none}@media screen and (max-width:1023px){.job-company{font-size:1.2em}.job-position,.job-date.start,.job-date.end,.job-description{font-size:.9em}.job-description{padding:0.5em;margin:0 auto}.job-logo{width:100%;height:100%;display:flex;align-items:center;justify-content:center}}@media screen and (max-width:767px){ul{justify-content:space-evenly}li{padding:0 1em}.hero .container{grid-auto-flow:column}.self-description{font-size:1.1em;padding:0 1em}.name{padding:0;margin:0 auto;border:0}.jobs-list .container{padding:0 0 0.5em}.jobs-list-title{margin:.5em auto}}@media screen and (max-width:420px){.hero .container{grid-template-areas:"img" "name" "description";justify-content:space-between;grid-template-rows:auto;grid-template-columns:1fr}.hero{padding:0}.hero-image{display:flex;justify-content:center;align-items:center;padding:1em 0}.hero-image img{width:50%}.name{padding:0;font-size:2em}.self-description{padding:.5em 0;font-size:1em;margin-bottom:1em}.jobs-list{padding-bottom:0}.jobs-list .container{padding:0}.job{display:block;margin:0}.job-logo{margin:1em auto;display:flex;justify-content:center}.job-company{font-size:1.3em}.job-position,.job-date.start,.job-date.end,.job-description{font-size:1em;margin:.5em auto}}@media screen and (max-width:320px){li a{font-size:.8em}.self-description{font-size:.8em}.job-position,.job-date.start,.job-date.end,.job-description{font-size:.9em;margin:.5em auto}}
     </style>
+
     <title>Luis Lira ~ Portfolio</title>
 </head>
 <body>
@@ -88,79 +91,9 @@
     </section>
 
     <section class="courses-list" id="courses-list">
-        <div class="container">
+        <div class="container" id="courses-container">
             <h3 class="courses-list-title">Cursos</h3>
-
-            <!-- Frontend -->
-
-            <figure class="course">
-                <img src="img/courses/diploma-jquery-js.png" alt="Diploma jQuery a JavaScript" title="Diploma jQuery a JavaScript" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-optimizacion-web.png" alt="Diploma Optimización Web" title="Diploma Optimización Web" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-postcss.png" alt="Diploma PotsCSS" title="Diploma PostCSS" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-animaciones-web.png" alt="Diploma Animaciones para la Web" title="Diploma Animaciones para la Web" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                    <img src="img/courses/diploma-responsive-design.png" alt="Diploma Responsive Design" title="Diploma Responsive Design" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                    <img src="img/courses/diploma-css-grid-layout.png" alt="Diploma CSS Grid Layout" title="Diploma CSS Grid Layout" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-html5-css3.png" alt="Diploma Desarrollo Web Online" title="Diploma Desarrollo Web Online" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-programacion-basica.png" alt="Diploma Programación Básica" title="Diploma Programación Básica" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-   
-            <!-- Conocimientos Generales -->
-
-            <figure class="course">
-                <img src="img/courses/diploma-git-github.png" alt="Diploma Git y GitHub" title="Diploma Git y GitHub" onclick="openCourse(event)" onload="fadeIn(event)" onload="fadeIn(event)">
-            </figure>
-            
-            <figure class="course">
-                <img src="img/courses/diploma-terminal.png" alt="Diploma Introducción a Terminal y Línea de Comandos" title="Diploma Introducción a Terminal y Línea de Comandos" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                    <img src="img/courses/diploma-ingenieria.png" alt="Diploma Ingeniería de Software" title="Diploma Ingeniería de Software" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-            
-            <figure class="course">
-                <img src="img/courses/diploma-redes.png" alt="Diploma Redes de Internet" title="Diploma Redes de Internet" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-            
-            <figure class="course">
-                <img src="img/courses/diploma-marca-personal.png" alt="Diploma Marca Personal" title="Diploma Marca Personal" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-            
-            <!-- Inglés -->
-
-            <figure class="course">
-                <img src="img/courses/diploma-ingles-basico.png" alt="Diploma Inglés Básico" title="Diploma Inglés Básico" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-
-            <figure class="course">
-                <img src="img/courses/diploma-ingles-gramatica.png" alt="Diploma Inglés Básico: Gramática" title="Diploma Inglés Básico: Gramática" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-            
-            <figure class="course">
-                <img src="img/courses/diploma-ingles-conversacion.png" alt="Diploma Inglés Básico: Conversación" title="Diploma Inglés Básico: Conversación" onclick="openCourse(event)" onload="fadeIn(event)">
-            </figure>
-            
+            <!-- Aquí se insertan los cursos desde JavaScript -->
         </div>
     </section>
 
@@ -176,6 +109,7 @@
             </div>
             <div class="profiles">
                 <a href="https://linkedin.com/in/luislirac" target="blank"><img src="img/linkedin-logo.svg" alt=""></a>
+                <a href="https://github.com/LuisLiraC" target="blank"><img src="img/github-logo.svg" alt=""></a>
                 <a href="https://platzi.com/@Luis_LiraC/" target="blank"><img src="img/platzi.png" srcset="img/platzi.png, img/platzi@2x.png 2x" alt=""></a>
             </div>
         </div>

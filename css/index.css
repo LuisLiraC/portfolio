@@ -231,6 +231,11 @@ h1, h3 {
     transform: scale(1.05);
 }
 
+.courses-container {
+    display: grid;
+    grid-auto-flow: row;
+}
+
 
 
 
