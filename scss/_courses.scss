@@ -29,6 +29,7 @@
     transition: 300ms;
     will-change: transform;
     cursor: pointer;
+    display: none;
 
     &:hover {
         transform: scale(1.05);
