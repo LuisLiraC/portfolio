@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: $font;
+}
+
+figure {
+    margin: 0;
+}
+
+.header,
+.hero,
+.jobs-list,
+.courses-list,
+.contact {
+    @include flex-attr(center);
+    min-width: 100vw;
+}
+
+.container {
+    padding: 0 1em;
+    width: 100%;
+    max-width: $section-max-w;
+}
+
+h1, h3 {
+    font-weight: 500;
+}

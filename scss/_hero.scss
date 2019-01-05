@@ -1,0 +1,61 @@
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 0 15px;
+    position: relative;
+    z-index: map-get($zi, layer1);
+
+    & .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        grid-template-areas: " . img name . "
+                             ". img description . ";
+        justify-items: center;
+        align-items: center;
+        background: inherit;
+        color: white;
+    }
+
+    &-image {
+        grid-area: img;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+
+}
+
+.name {
+    @include flex-attr(center);
+    grid-area: name;
+    margin: 0;
+    font-size: $name-fs;
+    padding: 0 30px 3px 35px;
+    border-bottom: 2px solid $emerald;
+    align-self: flex-end;
+}
+
+.self-description {
+    @include flex-attr(center);
+    grid-area: description;
+    margin: 10px 0;;
+    font-size: $name-fs / 2.5;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.abstract {
+    min-width: 100%;
+    grid-column: span 4;
+    text-align: center;
+    margin-top: 30px;
+
+    & img {
+        border-radius: $border;
+        margin: 0 10px 15px;
+    }
+}

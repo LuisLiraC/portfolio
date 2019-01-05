@@ -1,0 +1,7 @@
+.btn-normal {
+    @include btn($belize-hole, $white);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

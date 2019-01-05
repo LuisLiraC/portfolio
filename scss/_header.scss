@@ -1,0 +1,33 @@
+.header {
+    background-color: $wet-asphalt;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.menu-container {
+    @include flex-attr(flex-end);
+    width: $container-w;
+    font-family: $font;
+    padding: 0;
+    margin: 0;
+    height: $menu-container-h;
+
+    & li {
+        @include flex-attr(center);
+        padding: 0;
+    }
+
+    & li:hover {
+        background: $midnight-blue;
+    }
+
+    & li a {
+        text-decoration: none;
+        color: $white;
+        line-height: 0;
+        padding: 20px 20px;
+    }
+}
+
