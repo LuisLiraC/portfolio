@@ -42,13 +42,16 @@ function findJob(job) {
 function getActivities(job){
     switch (job){
         case "job1": 
-            return `Postulación de vacantes, Búsqueda de candidatos, Entrevistas vía telefónica, skype o presenciales, screening de candidatos, Seguimiento a proceso de contratación.`
+            return `Postulación de vacantes, Búsqueda de candidatos, Entrevistas vía telefónica, skype o presenciales, screening de candidatos, Seguimiento a proceso de contratación.
+                    </br></br>`
         case "job2":
             return `Desarrollo de aplicación de escritorio con Visual Basic .Net
+                    </br></br>
                     Aplicación para la gestión de pagos de aplicadores de Estudios Socioeconómicos</br>
                     </br>
                     Uso de Report Viewer para crear reportes de pagos por persona, por panco y general.</br>
-                    Almacenamiento en Base de Datos Microsoft Access 2016.`
+                    Almacenamiento en Base de Datos Microsoft Access 2016.
+                    </br></br>`
         case "job3":
             return `<strong>Reclutamiento:</strong></br>
                     Postulación de vacantes, Búsqueda de candidatos, Entrevistas, Encargado de plataforma de psicometrías en línea, Trato directo con clientes, Reportes mensuales de resultados de departamente de Estudios Socioeconómicos, Seguimiento a proceso de contratación.</br>
@@ -87,6 +90,7 @@ $jobHideModal.addEventListener('click', () => {
     }, 800);
 });
 
+
 function courseTemplate (HTMLString){
     const html = document.implementation.createHTMLDocument();
     html.body.innerHTML = HTMLString;
@@ -94,13 +98,15 @@ function courseTemplate (HTMLString){
 };
 
 const $courses_title = document.getElementById('courses-list-title')
-$courses_title.innerHTML = "Hola";
 
 const $courses_container = document.getElementById('courses-container');
 const folder = 'img/courses/';
 
 const course_images =[
     // Frontend
+    'diploma-sistemas-diseno.png',
+    'diploma-stylus.png',
+    'diploma-less.png',
     'diploma-sass.png',
     'diploma-fundamentos-javascript.png',
     'diploma-jquery-js.png',
@@ -117,6 +123,7 @@ const course_images =[
     'diploma-terminal.png',
     'diploma-ingenieria.png',
     'diploma-redes.png',
+    'diploma-finanzas.png',
     'diploma-marca-personal.png',
     // Inglés
     'diploma-ingles-basico.png',

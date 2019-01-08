@@ -43,7 +43,8 @@
     @include flex-attr(center);
     grid-area: description;
     margin: 10px 0;;
-    font-size: $name-fs / 2.5;
+    font-size: $name-fs / 2.7;
+    font-family: $second-font;
     text-align: center;
     align-self: flex-start;
 }

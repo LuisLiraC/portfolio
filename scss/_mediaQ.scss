@@ -29,6 +29,9 @@
 
 @media screen and (max-width: 767px){
 
+    h1, h3 {
+        font-weight: 500;
+   }
 
     .hero .container {
         grid-template-columns: 10% 40% 40% 10%;
@@ -60,14 +63,15 @@
 
     .jobs-list {
         & .container {
-            grid-template-columns: 1fr;
-            grid-template-areas: "title"
-                                 "job1"
-                                 "job2"
-                                 "job3";
+            @include flex-attr(center);
+            flex-wrap: wrap;
+            & div {
+                @include flex-attr(center);
+                width: $container-w;
+            }
             & .job {
-                width: 90%;
-                margin: 5px auto;
+                width: $container-w;
+                margin: 5px 5px;
                 display: grid;
                 grid-template-columns: repeat(3, 33%);
                 grid-auto-rows: 50px;
@@ -80,7 +84,7 @@
                 }
 
                 &-logo img {
-                    height: 30px;
+                    height: 25px;
                     width: auto;
                 }
 
@@ -155,6 +159,14 @@
     }
 }
 
+@media screen and (max-width: 560px){
+    .abstract {
+        & img {
+            width: 11%;
+        }
+    }
+}
+
 @media screen and (max-width: 420px){
 
     .menu-container li a {
@@ -194,7 +206,6 @@
 
         & img {
             width: 15%;
-            border-radius: 5px;
             margin: 10px 20px 10px;
         }
     }
@@ -283,12 +294,14 @@
         display: block;
     }
 
+    .self-description {
+        font-size: $name-fs / 3;
+    }
+
     .abstract {
         margin: 0;
 
         & img {
-            width: 15%;
-            border-radius: 5px;
             margin: 0 15px 10px;
         }
     }
