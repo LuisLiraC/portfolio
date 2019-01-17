@@ -104,6 +104,8 @@ const folder = 'img/courses/';
 
 const course_images =[
     // Frontend
+    'diploma-bootstrap.png',
+    'diploma-diseno-desarrolladores.png',
     'diploma-sistemas-diseno.png',
     'diploma-stylus.png',
     'diploma-less.png',
@@ -117,6 +119,8 @@ const course_images =[
     'diploma-css-grid-layout.png',
     'diploma-html5-css3.png',
     'diploma-programacion-basica.png',
+    // Backend
+    'diploma-php.png',
     // Conocimientos Generales
     'diploma-bd.png',
     'diploma-git-github.png',
